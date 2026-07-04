@@ -1,5 +1,7 @@
 # 💰 Smart-Budget-Agent-AI
 
+![Smart Budget Agent Thumbnail](images/thumbnail.png)
+
 Smart Budget Agent is an intelligent personal finance assistant built with Flask, SQLite, and Groq LLMs. It is tailored for natural conversation (supporting English, Hindi, and Hinglish) to simplify daily expense tracking, budget limit management, and savings goals tracking.
 
 ---
