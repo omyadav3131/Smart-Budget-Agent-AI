@@ -60,9 +60,27 @@ graph TD
 
 ---
 
-## 📊 Dashboard Preview
+## 📊 Application Interface Previews
 
-![PaisaWise Dashboard](images/dashboard-preview.png)
+### 1. Main Dashboard
+Provides real-time analytics, category spending breakdown, and AI consistency alerts.
+![Main Dashboard](images/dashboard-preview.png)
+
+### 2. AI Co-Pilot Chat
+Interact with PaisaWise AI to log expenses via natural language, request advice, and track budgets.
+![AI Co-Pilot Chat](images/copilot-chat-preview.png)
+
+### 3. Budget Planner
+Configure monthly limits per spending category and monitor budget fills dynamically.
+![Budget Planner](images/budget-planner-preview.png)
+
+### 4. Savings Goals
+Create financial milestones, track saved funds, and check progress towards goals.
+![Savings Goals](images/savings-goals-preview.png)
+
+### 5. Transactions Ledger
+View your entire categorized history of logged expenses and manage records easily.
+![Transactions Ledger](images/transactions-ledger-preview.png)
 
 ---
 
