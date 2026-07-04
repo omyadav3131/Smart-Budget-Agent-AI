@@ -1,62 +1,122 @@
-# Smart Budget Agent
+# 💰 Smart-Budget-Agent-AI (PaisaWise AI)
 
-Smart Budget Agent is a personal finance assistant built with Flask, SQLite, and AI-powered workflows. It helps users track expenses, manage budgets, save toward goals, and receive friendly financial advice in Hinglish.
+Smart Budget Agent (PaisaWise AI) is an intelligent personal finance assistant built with Flask, SQLite, and Groq LLMs. It is tailored for natural conversation (supporting English, Hindi, and Hinglish) to simplify daily expense tracking, budget limit management, and savings goals tracking.
 
-## Project Overview
+---
 
-This project combines simple financial tracking with conversational AI. Users can:
-- log daily expenses through natural language
-- set category budgets
-- create and update savings goals
-- view dashboard insights and recent transactions
-- ask questions about spending habits and receive guidance
+## 🌟 Key Features
 
-## AI and Images Workflows
+- **Natural Language Parsing**: Logs expenses from messages like *"Spent 150 on petrol"* or *"Dost ke sath dinner pe 1200 kharch ho gaye"*.
+- **Smart Budget Guard**: Sets limits for spending categories and flags budget status in real time.
+- **Goal Setter & Tracker**: Defines savings goals and updates current progress dynamically.
+- **PaisaWise AI Advisor**: Uses LLM capabilities to analyze spending habits and offer financial guidance.
+- **Dynamic Visual Dashboard**: Features a responsive Web UI with interactive charts (Chart.js) and progress bars.
 
-The project is designed around intelligent financial workflows:
-- AI chat workflows for expense entry, budget management, and financial advice
-- AI-assisted parsing of natural language inputs into structured expense data
-- image-based workflows for future receipt and bill processing, making it easier to capture expenses from photos
+---
 
-These workflows are intended to make money management more natural, faster, and more accessible for everyday users.
+## 🔄 System Workflows
 
-## Tech Stack
+Here is how the intelligence flows within the Smart Budget Agent system.
 
-- Python
-- Flask
-- SQLite
-- Groq AI
-- HTML/CSS/JavaScript
+### 1. Natural Language (Text) Expense Logging Workflow
+This workflow runs when a user inputs a natural language description of an expense:
 
-## Getting Started
+```mermaid
+graph TD
+    A[User Inputs Text/Hinglish] --> B{Unified Agent Routing}
+    B -->|Query / Advice| C[Advisor Agent]
+    B -->|Expense / Log| D[Tracker Agent]
+    
+    D --> E[Groq Llama-3.1 precision JSON Parser]
+    E --> F[Extract: Amount, Category, Description, Date]
+    F --> G[SQLite database validation]
+    G --> H[Check Budget limits]
+    H --> I[Save & return success status]
+    
+    C --> J[Query SQLite db logs & stats]
+    J --> K[Format Contextual Financial Advice]
+    K --> L[Respond to User]
+```
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 2. Proposed Image-Based Receipt & Bill Workflow
+Planned workflow to support automated receipt parsing using Vision LLMs:
 
-2. Set up environment variables:
-   - create a `.env` file
-   - add your `GROQ_API_KEY`
+```mermaid
+graph TD
+    A[User Uploads Receipt / Invoice Image] --> B[Web Dashboard UI]
+    B --> C[Backend Route /api/upload-receipt]
+    C --> D[Groq Vision / Multimodal LLM Extraction]
+    D --> E{Successfully Parsed?}
+    
+    E -->|Yes| F[Format structured JSON data]
+    E -->|No| G[Fall back to OCR + Text Parser]
+    
+    F --> H[Confirm details with User]
+    G --> H
+    
+    H --> I[Store to SQLite DB]
+    I --> J[Update Dashboard & Budget Status]
+```
 
-3. Run the app:
-   ```bash
-   python app.py
-   ```
+---
 
-4. Open the app in your browser at:
-   ```text
-   http://127.0.0.1:5000
-   ```
+## 📊 Dashboard Preview
 
-## Project Structure
+![PaisaWise Dashboard](images/dashboard-preview.svg)
 
-- `app.py` – Flask routes and API endpoints
-- `agents.py` – AI agent logic and parsing
-- `database.py` – SQLite database operations
-- `templates/` – frontend templates
-- `tests/` – unit tests for parsing and database operations
+---
 
-## Notes
+## 🛠️ Tech Stack
 
-This project is a practical example of combining AI with personal finance automation and can be extended with image recognition workflows for receipts, invoices, and bills.
+- **Backend**: Python, Flask
+- **Database**: SQLite
+- **AI/LLM Engine**: Groq Cloud API (`llama-3.1-8b-instant`)
+- **Frontend**: HTML5, CSS3 (Vanilla Custom UI), JavaScript (ES6+), Chart.js
+- **Environment Management**: `python-dotenv`
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/omyadav3131/Smart-Budget-Agent-AI.git
+cd Smart-Budget-Agent-AI
+```
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Set Up Environment Variables
+Create a `.env` file in the root directory:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 4. Run the Application
+```bash
+python app.py
+```
+
+### 5. Access the Web Dashboard
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your web browser.
+
+---
+
+## 📂 Project Directory Structure
+
+```text
+├── app.py                 # Flask server, routes, and API endpoints
+├── agents.py              # AI agents (Tracker, Advisor, Unified Routing)
+├── database.py            # SQLite database schema and operations
+├── requirements.txt       # Python dependency list
+├── .gitignore             # Standard Python ignore rules
+├── templates/
+│   └── index.html         # Rich dashboard frontend template
+├── images/
+│   └── dashboard-preview.svg # Dashboard layout preview SVG
+└── tests/                 # Unit and integration test suite
+```
+
