@@ -62,7 +62,7 @@ graph TD
 
 ## 📊 Dashboard Preview
 
-![PaisaWise Dashboard](images/dashboard-preview.svg)
+![PaisaWise Dashboard](images/dashboard-preview.png)
 
 ---
 
