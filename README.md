@@ -20,14 +20,6 @@ The project is designed around intelligent financial workflows:
 
 These workflows are intended to make money management more natural, faster, and more accessible for everyday users.
 
-## Screenshots
-
-Add your app screenshots in the images folder and reference them here:
-
-![Smart Budget Agent Dashboard](images/dashboard-preview.svg)
-
-> Replace the image above with your real screenshot once you add it to the repository.
-
 ## Tech Stack
 
 - Python
