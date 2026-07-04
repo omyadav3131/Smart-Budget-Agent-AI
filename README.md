@@ -1,6 +1,6 @@
-# 💰 Smart-Budget-Agent-AI (PaisaWise AI)
+# 💰 Smart-Budget-Agent-AI
 
-Smart Budget Agent (PaisaWise AI) is an intelligent personal finance assistant built with Flask, SQLite, and Groq LLMs. It is tailored for natural conversation (supporting English, Hindi, and Hinglish) to simplify daily expense tracking, budget limit management, and savings goals tracking.
+Smart Budget Agent is an intelligent personal finance assistant built with Flask, SQLite, and Groq LLMs. It is tailored for natural conversation (supporting English, Hindi, and Hinglish) to simplify daily expense tracking, budget limit management, and savings goals tracking.
 
 ---
 
@@ -9,7 +9,7 @@ Smart Budget Agent (PaisaWise AI) is an intelligent personal finance assistant b
 - **Natural Language Parsing**: Logs expenses from messages like *"Spent 150 on petrol"* or *"Dost ke sath dinner pe 1200 kharch ho gaye"*.
 - **Smart Budget Guard**: Sets limits for spending categories and flags budget status in real time.
 - **Goal Setter & Tracker**: Defines savings goals and updates current progress dynamically.
-- **PaisaWise AI Advisor**: Uses LLM capabilities to analyze spending habits and offer financial guidance.
+- **Smart-Budget-Agent Advisor**: Uses LLM capabilities to analyze spending habits and offer financial guidance.
 - **Dynamic Visual Dashboard**: Features a responsive Web UI with interactive charts (Chart.js) and progress bars.
 
 ---
@@ -66,9 +66,9 @@ graph TD
 Provides real-time analytics, category spending breakdown, and AI consistency alerts.
 ![Main Dashboard](images/dashboard-preview.png)
 
-### 2. AI Co-Pilot Chat
-Interact with PaisaWise AI to log expenses via natural language, request advice, and track budgets.
-![AI Co-Pilot Chat](images/copilot-chat-preview.png)
+### 2. AI Assistant Chat
+Interact with Smart-Budget-Agent to log expenses via natural language, request advice, and track budgets.
+![AI Assistant Chat](images/copilot-chat-preview.png)
 
 ### 3. Budget Planner
 Configure monthly limits per spending category and monitor budget fills dynamically.

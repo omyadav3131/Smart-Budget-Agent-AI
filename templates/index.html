@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💰 PaisaWise AI - Smart Middle-Class Budget Agent</title>
+    <title>💰 Smart-Budget-Agent - Smart Middle-Class Budget Agent</title>
     <!-- Outfit Font and FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -786,7 +786,7 @@
     <div class="sidebar">
         <div class="logo">
             <i class="fa-solid fa-wallet"></i>
-            <h2>PaisaWise AI</h2>
+            <h2>Smart-Budget-Agent</h2>
         </div>
         <ul class="menu-list">
             <li class="menu-item active" onclick="switchTab('dashboard', this)">
@@ -795,7 +795,7 @@
             </li>
             <li class="menu-item" onclick="switchTab('chat', this)">
                 <i class="fa-solid fa-robot"></i>
-                <span>AI Co-Pilot Chat</span>
+                <span>AI Assistant Chat</span>
             </li>
             <li class="menu-item" onclick="switchTab('budgets', this)">
                 <i class="fa-solid fa-sliders"></i>
@@ -916,7 +916,7 @@
                     <div class="chat-box" id="chatBox">
                         <div class="message bot">
                             <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
-                            <div class="msg-bubble">Pranam! 👋 Main PaisaWise AI Assistant hoon.
+                            <div class="msg-bubble">Pranam! 👋 Main Smart-Budget-Agent AI Assistant hoon.
 
 Mujhe batayein aapne kya kharch kiya (e.g. "aaj dosto ke sath movie ticket 400 aur cab 120 ki thi"), aur main auto-track kar lunga.
 
@@ -1096,7 +1096,7 @@ Aap mujhse budget advice bhi maang sakte hain ya saving goals set kar sakte hain
             // Header titles
             const titleMap = {
                 'dashboard': ['Financial Dashboard', "Welcome back! Here's your middle-class consistency check."],
-                'chat': ['AI Co-Pilot Assistant', 'Meet your smart financial guide. Ask anything or log expenses.'],
+                'chat': ['AI Assistant', 'Meet your smart financial guide. Ask anything or log expenses.'],
                 'budgets': ['Monthly Budgets Planner', 'Track, restrict, and manage category spending.'],
                 'goals': ['Savings Targets', 'Track goals, accumulate savings, and optimize progress.'],
                 'ledger': ['Transactions Ledger', 'View, search, and manage your logged expense entries.']
@@ -1594,7 +1594,7 @@ Aap mujhse budget advice bhi maang sakte hain ya saving goals set kar sakte hain
             loaderDiv.className = 'message bot typing-indicator';
             loaderDiv.innerHTML = `
                 <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
-                <div class="msg-bubble" style="font-style:italic; color:var(--text-muted);">PaisaWise is analyzing...</div>
+                <div class="msg-bubble" style="font-style:italic; color:var(--text-muted);">Smart-Budget-Agent is analyzing...</div>
             `;
             chatBox.appendChild(loaderDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
